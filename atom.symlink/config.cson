@@ -3,19 +3,21 @@
   'useHardwareAcceleration': false
   'fontSize': 14
   'fontFamily': 'Menlo'
+  'invisibles': {}
 'core':
   'disabledPackages': [
     'go-to-line'
     'autosave'
     'autocomplete-plus'
     'highlight-selected'
+    'exception-reporting'
+    'metrics'
   ]
   'themes': [
     'atom-dark-ui'
     'solarized-dark-syntax'
   ]
   'useReactEditor': true
-  'projectHome': '/Users/joseramonc/src'
 'spell-check':
   'grammars': [
     'source.gfm'
@@ -36,9 +38,6 @@
 'release-notes':
   'viewedVersion': '0.95.0'
 'tree-view': {}
-'exception-reporting':
-  'userId': 'fcda247b-3c47-a3ed-a453-31dd04540f93'
-'metrics':
-  'userId': '1b107aa6bd326e98a9467571dbb78bbf50cc240b'
-'instacodes': {}
-'instacodes-plugin': {}
+'exception-reporting': {}
+'metrics': {}
+'tabs': {}
