@@ -1,0 +1,5 @@
+#executes the unicorn command required to run rails app with boxen and nginx
+
+unic() {
+  bundle exec unicorn -c config/unicorn.rb
+}
