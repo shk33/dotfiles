@@ -1,7 +1,6 @@
 'editor':
   'showIndentGuide': true
-  'useHardwareAcceleration': false
-  'fontSize': 14
+  'fontSize': 15
   'fontFamily': 'Menlo'
   'invisibles': {}
 'core':
