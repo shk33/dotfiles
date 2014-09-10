@@ -10,9 +10,9 @@ export CLICOLOR=true
 #oh-my-zsh-configuration
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-fpath=($ZSHDOTFILE/functions $fpath)
+fpath=($ZSH/functions $fpath)
 
-autoload -U $ZSHDOTFILE/functions/*(:t)
+autoload -U $ZSH/functions/*(:t)
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -30,7 +30,12 @@ setopt PROMPT_SUBST
 setopt CORRECT
 setopt COMPLETE_IN_WORD
 setopt IGNORE_EOF
-setopt AUTO_CD
+setopt AUTO_CD ## <3 from oh-my-zsh
+unsetopt MENU_COMPLETE   # do not autoselect the first completion entry
+unsetopt FLOW_CONTROL
+setopt COMPLETE_IN_WORD
+setopt ALWAYS_TO_END
+setopt AUTO_MENU ## <3 from oh-my-zsh
 
 setopt APPEND_HISTORY # adds history
 setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
@@ -40,13 +45,3 @@ setopt HIST_REDUCE_BLANKS
 # don't expand aliases _before_ completion has finished
 #   like: git comm-[tab]
 setopt complete_aliases
-
-zle -N newtab
-
-bindkey '^[^[[D' backward-word
-bindkey '^[^[[C' forward-word
-bindkey '^[[5D' beginning-of-line
-bindkey '^[[5C' end-of-line
-bindkey '^[[3~' delete-char
-bindkey '^[^N' newtab
-bindkey '^?' backward-delete-char
