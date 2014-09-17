@@ -29,7 +29,7 @@ git_dirty() {
 }
 
 git_tag(){
-  echo "%{$fg_bold[blue]git%}@"
+  echo "%{$fg_bold[blue]%}@"
 }
 
 git_prompt_info () {
@@ -77,7 +77,7 @@ directory_name() {
 }
 
 # emojis in the prompt.
-export PROMPT=$'\n$(directory_name) $(rb_prompt)$(git_dirty)$(need_push)\n%(?:🐥 :👹 %s) '
+export PROMPT=$'$(directory_name) $(rb_prompt)$(git_dirty)$(need_push)%(?:🐥 :👹 %s) '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
