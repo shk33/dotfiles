@@ -15,6 +15,11 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
   zle -N zle-line-finish
 fi
 
+autoload -Uz up-line-or-beginning-search # <3
+autoload -Uz down-line-or-beginning-search # <3
+zle -N up-line-or-beginning-search # <3
+zle -N down-line-or-beginning-search # <3
+
 bindkey -e                                            # Use emacs key bindings
 
 bindkey '\ew' kill-region                             # [Esc-w] - Kill from the cursor to the mark
@@ -43,8 +48,8 @@ fi
 
 bindkey ' ' magic-space                               # [Space] - do history expansion
 
-bindkey '^[[1;5C' forward-word                        # [Ctrl-RightArrow] - move forward one word
-bindkey '^[[1;5D' backward-word                       # [Ctrl-LeftArrow] - move backward one word
+bindkey '^[[1;5C' forward-word                        # [Alt-RightArrow] - move forward one word
+bindkey '^[[1;5D' backward-word                       # [Alt-LeftArrow] - move backward one word
 
 if [[ "${terminfo[kcbt]}" != "" ]]; then
   bindkey "${terminfo[kcbt]}" reverse-menu-complete   # [Shift-Tab] - move through the completion menu backwards
