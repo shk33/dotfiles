@@ -24,14 +24,13 @@ setopt NO_LIST_BEEP
 setopt LOCAL_OPTIONS # allow functions to have local options
 setopt LOCAL_TRAPS # allow functions to have local traps
 setopt HIST_VERIFY
-setopt SHARE_HISTORY # share history between sessions ???
 setopt EXTENDED_HISTORY # add timestamps to history
 setopt PROMPT_SUBST
 setopt CORRECT
 setopt COMPLETE_IN_WORD
 setopt IGNORE_EOF
 setopt AUTO_CD ## <3 from oh-my-zsh
-unsetopt MENU_COMPLETE   # do not autoselect the first completion entry
+unsetopt MENU_COMPLETE # do not autoselect the first completion entry
 unsetopt FLOW_CONTROL
 setopt COMPLETE_IN_WORD
 setopt ALWAYS_TO_END
