@@ -1,7 +1,7 @@
 'editor':
-  'showIndentGuide': true
-  'fontSize': 15
   'fontFamily': 'Menlo'
+  'fontSize': 15
+  'showIndentGuide': true
   'invisibles': {}
 'core':
   'disabledPackages': [
@@ -36,7 +36,4 @@
   'showOnStartup': false
 'release-notes':
   'viewedVersion': '0.95.0'
-'tree-view': {}
-'exception-reporting': {}
-'metrics': {}
-'tabs': {}
+'emmet': {}
