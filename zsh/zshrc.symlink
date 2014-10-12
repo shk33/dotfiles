@@ -48,4 +48,6 @@ unset config_files
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+#[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
+eval "$(rbenv init -)"
