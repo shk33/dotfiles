@@ -34,8 +34,8 @@ git_tag(){
 
 git_prompt_info () {
  ref=$($git symbolic-ref HEAD 2>/dev/null) || return
-# echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
- echo "${ref#refs/heads/}"
+ echo "(%{\e[0;33m%}${ref#refs/heads/}%{\e[0m%})"
+ #echo "${ref#refs/heads/}"
 }
 
 unpushed () {
@@ -76,8 +76,10 @@ directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\%{$reset_color%}"
 }
 
+local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
+ 
 # emojis in the prompt.
-export PROMPT=$'$(directory_name) $(rb_prompt)$(git_dirty)$(need_push)%(?:$ :$ %s) '
+export PROMPT=$'${ret_status} $(directory_name)$(git_dirty)$(need_push)%(?: $ : $ %s)'
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
