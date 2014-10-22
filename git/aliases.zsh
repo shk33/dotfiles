@@ -19,6 +19,7 @@ alias gcmsg='git commit -m'
 alias gco='git checkout'
 alias gcb='git copy-branch-name'
 alias gb='git branch'
+alias grmt='git remote'
 #alias gst='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gst='git status'
 alias glom='git pull origin master'
