@@ -1,16 +1,18 @@
-# @joseramonc dotfiles
+# @arandilopez dotfiles
 
-My .dotfiles, forked from [holman dotfiles](https://github.com/holman/dotfiles), much :heart:
+My .dotfiles, forked from [holman dotfiles](https://github.com/holman/dotfiles), optimized for ubuntu 14.04, with all the :heart:
 
-# install
+# Install
 
 Run this:
 
-    git clone https://github.com/joseramonc/dotfiles.git ~/.dotfiles
+    git clone https://github.com/arandilopez/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     script/bootstrap
 This will symlink the appropriate files in .dotfiles to your home directory. Everything is configured and tweaked within ~/.dotfiles.
 
 The main file you'll want to change right off the bat is zsh/zshrc.symlink, which sets up a few paths that'll be different on your particular machine.
 
-dot is a simple script that installs some dependencies, sets sane OS X defaults, and so on. Tweak this script, and occasionally run dot from time to time to keep your environment fresh and up-to-date. You can find this script in bin/.
+Added some git alias and [hub](https://github.com/github/hub) support. Also with apt-get alias and some features more.
+
+## Thanks to [joseramonc](https://github.com/joseramonc) and [holman](https://github.com/holman)
