@@ -43,6 +43,9 @@ done
 
 unset config_files
 
+# load gibo completion
+source $ZSH/system/gibo-completion.zsh
+
 # export ANDROID="/opt/boxen/homebrew/var/lib/android-sdk"
 # export MANPATH="/usr/local/man:$MANPATH"
 
