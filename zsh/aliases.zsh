@@ -1,14 +1,9 @@
 alias reloadz='. ~/.zshrc'
 alias stt='subl .'
 alias st='subl '
-alias adg='sudo apt-get update && sudo apt-get upgrade'
-alias ai='sudo apt-get install'
-alias ad='sudo apt-get update'
-alias ag='sudo apt-get upgrade'
-alias cl='clear'
 alias dotos='subl ~/.dotfiles'
 alias at='atom'
-alias open='nautilus -n . &'						#Open nautilus in current dir
+alias open='nautilus -n . 2> /dev/null'						#Open nautilus in current dir
 alias bootstrap='~/.dotfiles/script/bootstrap'
 alias dotfiles='cd ~/.dotfiles'
 alias zeves='/opt/Z/Z-Eves/system/z-eves-gui.sh &' #ZEVES access... 
