@@ -1,9 +1,8 @@
 alias reloadz='. ~/.zshrc'
 alias stt='subl .'
 alias st='subl '
-alias dotos='subl ~/.dotfiles'
+alias dotos='subl $ZSH'
 alias at='atom'
-alias open='nautilus -n . 2> /dev/null'						#Open nautilus in current dir
-alias bootstrap='~/.dotfiles/script/bootstrap'
-alias dotfiles='cd ~/.dotfiles'
+alias bootstrap='$ZSH/script/bootstrap'
+alias dotfiles='cd $ZSH'
 alias zeves='/opt/Z/Z-Eves/system/z-eves-gui.sh &' #ZEVES access... 
