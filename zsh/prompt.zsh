@@ -63,10 +63,26 @@ ruby_version() {
   fi
 }
 
+node_version(){
+  if (( $+commands[node] ))
+  then
+    echo "$(node -v | awk '{print $1}')"
+  fi
+}
+
 rb_prompt() {
   if ! [[ -z "$(ruby_version)" ]]
   then
-    echo "%{$fg_bold[yellow]%}$(ruby_version)%{$reset_color%}"
+    echo "%{$fg_bold[red]%}rb: $(ruby_version)%{$reset_color%}"
+  else
+    echo ""
+  fi
+}
+
+nd_prompt(){
+  if ! [[ -z "$(node_version)" ]]
+  then
+    echo "%{$fg_bold[magenta]%}nd: $(node_version)%{$reset_color%}"
   else
     echo ""
   fi
@@ -79,9 +95,10 @@ directory_name() {
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
  
 # emojis in the prompt.
-export PROMPT=$'${ret_status} $(directory_name)$(git_dirty)$(need_push)%(?: $ : $ %s)'
+export PROMPT=$'${ret_status} $(directory_name)$(git_dirty)$(need_push)%(?: %{$fg_bold[green]%}➤ : %{$fg_bold[red]%}!➤ %s)%{$reset_color%}'
 set_prompt () {
-  export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
+#  export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
+  export RPROMPT="$(nd_prompt) $(rb_prompt)"
 }
 
 precmd() {
