@@ -46,17 +46,13 @@ unset config_files
 # load gibo completion
 source $ZSH/system/gibo-completion.zsh
 
-# load grep think.
+# load grep thing.
 source $ZSH/zsh/lib/grep.zsh
-# load ls-color
+# load ls-color to color LOL
 source $ZSH/zsh/lib/ls-color.zsh
-
-# export ANDROID="/opt/boxen/homebrew/var/lib/android-sdk"
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/dsa_id"
-#[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 eval "$(rbenv init -)"
 
