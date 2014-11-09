@@ -15,3 +15,7 @@ alias ad='sudo apt-get update'
 alias ag='sudo apt-get upgrade'
 alias cl='clear'
 alias open='xdg-open . &> /dev/null'
+if (( $+commands[php] ))
+then
+  alias phpserve='php -S 0.0.0.0:8000'
+fi
