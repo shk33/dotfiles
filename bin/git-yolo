@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Push every crap you have done.
+#
+
+branch=$(git rev-parse --abbrev-ref HEAD)
+git push -f origin $branch

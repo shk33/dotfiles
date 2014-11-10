@@ -19,3 +19,8 @@ if (( $+commands[php] ))
 then
   alias phpserve='php -S 0.0.0.0:8000'
 fi
+
+if (( $+commands[sudo] ))
+then
+  alias bythepowerofgreyskull='sudo'
+fi
