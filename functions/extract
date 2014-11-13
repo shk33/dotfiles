@@ -10,6 +10,7 @@ extract () {
             *.bz2)      bunzip2 $1                          ;;
             *.dmg)      hdiutil mount $1                    ;;
             *.gz)       gunzip $1                           ;;
+            *.7z)       7z x $1                             ;;
             *.tar)      tar -xvf $1                         ;;
             *.tbz2)     tar -jxvf $1                        ;;
             *.tgz)      tar -zxvf $1                        ;;
@@ -25,4 +26,3 @@ extract () {
         echo "'$1' is not a valid file"
     fi
 }
-
