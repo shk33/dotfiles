@@ -1,4 +1,4 @@
-#alias reloadz='. ~/.zshrc'
+alias reload='. ~/.zshrc echo "ZSH config reloaded from ~/.zshrc"'
 alias stt='subl .'
 alias st='subl'
 alias dotos='atom $ZSH'
