@@ -9,10 +9,10 @@
 #   alias la='gls -A --color'
 # fi
 alias bye='exit'
-alias adg='sudo apt-get update && sudo apt-get upgrade'
-alias ai='sudo apt-get install'
+alias adg='sudo apt-get update && sudo apt-get upgrade -y'
+alias ai='sudo apt-get install -y'
 alias ad='sudo apt-get update'
-alias ag='sudo apt-get upgrade'
+alias ag='sudo apt-get upgrade -y'
 alias cl='clear'
 alias open='xdg-open . &> /dev/null'
 if (( $+commands[php] ))
