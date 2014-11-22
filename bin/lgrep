@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Just a hotfix to search some file or folder inside current folder
+
+ls | grep $1
