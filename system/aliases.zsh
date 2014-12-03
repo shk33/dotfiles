@@ -17,10 +17,12 @@ alias cl='clear'
 alias open='xdg-open . &> /dev/null'
 if (( $+commands[php] ))
 then
-  alias phpserve='php -S 0.0.0.0:8000'
+  alias php-serve='php -S 0.0.0.0:8000'
 fi
 
 if (( $+commands[sudo] ))
 then
   alias bythepowerofgreyskull='sudo'
 fi
+
+alias webserver='python -m SimpleHTTPServer 9090'
