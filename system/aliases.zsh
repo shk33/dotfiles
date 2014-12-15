@@ -15,10 +15,7 @@ alias ad='sudo apt-get update'
 alias ag='sudo apt-get upgrade -y'
 alias cl='clear'
 alias open='xdg-open . &> /dev/null'
-if (( $+commands[php] ))
-then
-  alias php-serve='php -S 0.0.0.0:8000'
-fi
+
 
 if (( $+commands[sudo] ))
 then

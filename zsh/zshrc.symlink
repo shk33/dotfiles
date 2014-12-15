@@ -44,15 +44,14 @@ done
 unset config_files
 
 # load gibo completion
-source $ZSH/system/gibo-completion.zsh
+# source $ZSH/system/gibo-completion.zsh
 
 # load grep thing.
 source $ZSH/zsh/lib/grep.zsh
 # load ls-color to color LOL
 source $ZSH/zsh/lib/ls-color.zsh
 
-# ssh
-export SSH_KEY_PATH="~/.ssh/dsa_id"
+
 
 eval "$(rbenv init -)"
 
