@@ -43,3 +43,4 @@ cd () {
 
 alias md='mkdir -p'
 alias d='dirs -v | head -10'
+alias rmd='rm -rf'
