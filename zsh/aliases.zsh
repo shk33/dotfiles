@@ -1,6 +1,6 @@
 alias reload='. ~/.zshrc && echo "ZSH config reloaded from ~/.zshrc"'
-alias stt='subl .'
-alias st='subl'
+alias stt='LANG=en_US.UTF-8 subl .'
+alias st='LANG=en_US.UTF-8 subl'
 alias dotos='atom $ZSH'
 alias at='atom'
 alias bootstrap='$ZSH/script/bootstrap'
