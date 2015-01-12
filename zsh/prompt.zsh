@@ -99,6 +99,7 @@ export PROMPT=$'${ret_status} $(directory_name)$(git_dirty)$(need_push)%(?: %{$f
 set_prompt () {
 #  export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
   export RPROMPT="$(nd_prompt) $(rb_prompt)"
+  # export RPROMPT="$(rb_prompt)"
 }
 
 precmd() {
