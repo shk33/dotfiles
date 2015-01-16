@@ -1,3 +1,4 @@
-cd ~/.dotfiles
+#!/usr/bin/env bash
+
+cd $HOME/.dotfiles
 git pull
-echo "dotfiles updated!!!"
