@@ -15,6 +15,7 @@ alias ad='sudo apt-get update'
 alias ag='sudo apt-get upgrade -y'
 alias cl='clear'
 alias open='xdg-open . &> /dev/null'
+alias fucking='sudo'
 
 
 if (( $+commands[sudo] ))
