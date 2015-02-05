@@ -56,3 +56,6 @@ source $ZSH/zsh/lib/ls-color.zsh
 eval "$(rbenv init -)"
 
 source $HOME/.profile
+
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/home/arandilopez/.gvm/bin/gvm-init.sh" ]] && source "/home/arandilopez/.gvm/bin/gvm-init.sh"
