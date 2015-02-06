@@ -6,6 +6,6 @@ export GOROOT="/usr/local/go"
 # ssh
 export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-
 # PATH
 export PATH="./bin:/usr/local/bin:/usr/local/sbin:$ZSH/bin:$HOME/.composer/vendor/bin:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:/usr/local/heroku/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:/opt/genymotion:$GOROOT/bin:$PATH"
+export NVM_SYMLINK_CURRENT=true
