@@ -8,3 +8,6 @@ export ZSH=$HOME/.dotfiles
 
 # Set OS X defaults
 #$ZSH/osx/set-defaults.sh
+
+# Update this dotfiles
+cd $ZSH && git up
