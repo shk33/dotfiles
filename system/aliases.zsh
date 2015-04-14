@@ -24,3 +24,6 @@ then
 fi
 
 alias webserver='python -m SimpleHTTPServer 9090'
+
+alias start-mysql='sudo service mysql start'
+alias start-apache='sudo service apache2 start'
