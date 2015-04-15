@@ -33,3 +33,5 @@ alias ginit='git init'
 alias gundo='git undo'
 alias gw='git whatchanged'
 alias gf='git fetch origin'
+alias git-ignore='git rm -r --cached . && echo "*** Cache clean, now add all files ***"'
+alias gig=git-ignore
