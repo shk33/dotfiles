@@ -1,6 +1,6 @@
 # @arandilopez dotfiles
 
-My .dotfiles, forked from [holman dotfiles](https://github.com/holman/dotfiles), optimized for ubuntu 14.04, with all the :heart:
+My .dotfiles, forked from [holman dotfiles](https://github.com/holman/dotfiles), optimized for Ubuntu 14.04, with all the :heart:
 
 # Install
 
@@ -10,7 +10,7 @@ For this dotfiles version you need to install zsh. To install zsh just run:
 
     sudo apt-get install zsh
     chsh -s `which zsh`
-    
+
 Then logout and login again to see changes.
 
 There are some dependecies that you must to install
@@ -40,3 +40,7 @@ For example, you can run `adg` in the command line an as an equivalent of `sudo 
 If you have some troubles installing these dotfiles or any other issue, you can send me a mail o leave an issue in the issue tracker.
 
 Thanks a lot. :heart:
+
+## TODO
+
+- Write wiki to document all features.

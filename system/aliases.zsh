@@ -25,5 +25,11 @@ fi
 
 alias webserver='python -m SimpleHTTPServer 9090'
 
+# LAMP Management
 alias start-mysql='sudo service mysql start'
+alias restart-mysql='sudo service mysql restart'
+alias stop-mysql='sudo service mysql stop'
+
 alias start-apache='sudo service apache2 start'
+alias restart-apache='sudo service apache2 restart'
+alias stop-apache='sudo service apache2 stop'
