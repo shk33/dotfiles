@@ -27,4 +27,4 @@ export NVM_DIR="$HOME/.nvm"
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/home/arandilopez/.gvm/bin/gvm-init.sh" ]] && source "/home/arandilopez/.gvm/bin/gvm-init.sh"
+[[ -s "/home/$HOME/.gvm/bin/gvm-init.sh" ]] && source "/home/$HOME/.gvm/bin/gvm-init.sh"
