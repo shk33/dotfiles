@@ -2,7 +2,7 @@
 #
 
 [hub]
-        protocol = https
+        protocol = ssl
 [user]
         name = AUTHORNAME
         email = AUTHOREMAIL
