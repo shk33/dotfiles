@@ -1,0 +1,28 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+
+set rtp+=~/.nvim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'editorconfig-vim'
+Plugin 'airblade/vim-gitgutter'
+
+" All of your Plugins must be added before the following line
+call vundle#end()		" required
+syntax on
+filetype plugin indent on	" required
+set number			" Setting line of code
+
+" -------------- GIT ------------------------------------
+highlight clear SignColumn
+highlight SignColumn ctermbg=0
+nmap gn <Plug>GitGutterNextHunk
+nmap gN <Plug>GitGutterPrevHunk<F37>
