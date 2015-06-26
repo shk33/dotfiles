@@ -70,10 +70,17 @@ node_version(){
   fi
 }
 
+php_version() {
+  if (( $+commands[php] ))
+  then
+    echo "$(php -i | grep 'PHP Version' -m 1 | awk 'match($4, /[0-9]*(.[0-9]*)(.[0-9]*)/) {print substr($4, RSTART, RLENGTH)}')"
+  fi
+}
+
 rb_prompt() {
   if ! [[ -z "$(ruby_version)" ]]
   then
-    echo "%{$fg_bold[magenta]%}rb: $(ruby_version)%{$reset_color%}"
+    echo "%{$fg_bold[red]%}rb: $(ruby_version)%{$reset_color%}"
   else
     echo ""
   fi
@@ -82,7 +89,16 @@ rb_prompt() {
 nd_prompt(){
   if ! [[ -z "$(node_version)" ]]
   then
-    echo "%{$fg_bold[yellow]%}nd: $(node_version)%{$reset_color%}"
+    echo "%{$fg_bold[green]%}nd: $(node_version)%{$reset_color%}"
+  else
+    echo ""
+  fi
+}
+
+php_prompt() {
+  if ! [[ -z "$(php_version)" ]];
+  then
+    echo "%{$fg_bold[magenta]%}php: $(php_version)%{$reset_color%}"
   else
     echo ""
   fi
@@ -97,9 +113,7 @@ local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 # emojis in the prompt.
 export PROMPT=$'${ret_status} $(directory_name)$(git_dirty)$(need_push)%(?: %{$fg_bold[green]%}➤ : %{$fg_bold[red]%}!➤ %s)%{$reset_color%}'
 set_prompt () {
-#  export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
-  export RPROMPT="$(nd_prompt) $(rb_prompt)"
-  # export RPROMPT="$(rb_prompt)"
+  export RPROMPT="$(php_prompt) $(rb_prompt) $(nd_prompt)"
 }
 
 precmd() {
