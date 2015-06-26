@@ -43,9 +43,6 @@ done
 
 unset config_files
 
-# load gibo completion
-# source $ZSH/system/gibo-completion.zsh
-
 # load grep thing.
 source $ZSH/zsh/lib/grep.zsh
 # load ls-color to color LOL
@@ -57,5 +54,5 @@ eval "$(rbenv init -)"
 
 source $HOME/.profile
 
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+# THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
