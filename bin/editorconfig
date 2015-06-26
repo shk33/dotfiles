@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Use wget to download an .editorconfig file.
+# Subtitute by your own .editorconfig file url
+
+URL="https://gist.githubusercontent.com/arandilopez/6359e6caa2ffdc1f1a2e/raw/667abdbc907d1e333be3d9eadf74a2da174d5a4c/.editorconfig"
+
+wget $URL
