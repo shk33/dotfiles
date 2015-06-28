@@ -20,6 +20,10 @@ alias start-mysql='sudo service mysql start'
 alias restart-mysql='sudo service mysql restart'
 alias stop-mysql='sudo service mysql stop'
 
+alias start-postgresql='sudo service postgresql start'
+alias restart-postgresql='sudo service postgresql restart'
+alias stop-postgresql='sudo service postgresql stop'
+
 alias start-apache='sudo service apache2 start'
 alias restart-apache='sudo service apache2 restart'
 alias stop-apache='sudo service apache2 stop'
