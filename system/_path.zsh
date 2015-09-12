@@ -9,4 +9,4 @@ export SSH_KEY_PATH="~/.ssh/dsa_id"
 # PATH
 export PATH="./bin:/usr/local/bin:/usr/local/sbin:$ZSH/bin:$HOME/.composer/vendor/bin:$HOME/.rbenv/bin:$HOME/.rbenv/plugins/ruby-build/bin:/usr/local/heroku/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:/opt/genymotion:$GOROOT/bin:$PATH"
 export NVM_SYMLINK_CURRENT=true
-export NODE_PATH=$NODE_PATH:$HOME/.nvm/versions/io.js/v3.3.0/lib/node_modules
+export NODE_PATH=$NODE_PATH:$HOME/.nvm/versions/node/v4.0.0/lib/node_modules
