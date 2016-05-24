@@ -5,7 +5,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/Projects
+export PROJECTS=~/Code
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
@@ -42,9 +42,8 @@ do
 done
 
 unset config_files
+unset GREP_OPTIONS
 
-# load grep thing.
-source $ZSH/zsh/lib/grep.zsh
 # load ls-color to color LOL
 source $ZSH/zsh/lib/ls-color.zsh
 
@@ -63,7 +62,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 ###-tns-completion-start-###
-if [ -f /home/arandilopez/.tnsrc ]; then 
-    source /home/arandilopez/.tnsrc 
+if [ -f "$HOME/.tnsrc" ]; then
+    source "$HOME/.tnsrc"
 fi
 ###-tns-completion-end-###
