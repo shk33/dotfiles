@@ -35,3 +35,5 @@ alias gw='git whatchanged'
 alias gf='git fetch origin'
 alias git-ignore='git rm -r --cached . && echo "*** Cache clean, now add all files ***"'
 alias gig=git-ignore
+alias sequelize='node_modules/.bin/sequelize'
+alias seq='node_modules/.bin/sequelize'
