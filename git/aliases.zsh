@@ -38,3 +38,4 @@ alias gig=git-ignore
 alias sequelize='node_modules/.bin/sequelize'
 alias seq='node_modules/.bin/sequelize'
 alias pgadmin='~/pgadmin4/pgadmin4'
+alias javaselect='sudo update-alternatives --config java'
