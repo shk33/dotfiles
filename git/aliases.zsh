@@ -37,3 +37,4 @@ alias git-ignore='git rm -r --cached . && echo "*** Cache clean, now add all fil
 alias gig=git-ignore
 alias sequelize='node_modules/.bin/sequelize'
 alias seq='node_modules/.bin/sequelize'
+alias pgadmin='~/pgadmin4/pgadmin4'
