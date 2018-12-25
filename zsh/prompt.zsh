@@ -70,6 +70,13 @@ node_version(){
   fi
 }
 
+python_version(){
+  if (( $+commands[python] ))
+  then
+    echo "$(python -V | awk '{print $2}')"
+  fi
+}
+
 php_version() {
   if (( $+commands[php] ))
   then
@@ -95,6 +102,15 @@ nd_prompt(){
   fi
 }
 
+python_prompt(){
+  if ! [[ -z "$(python_version)" ]]
+  then
+    echo "%{$fg_bold[cyan]%}py: $(python_version)%{$reset_color%}"
+  else
+    echo ""
+  fi
+}
+
 php_prompt() {
   if ! [[ -z "$(php_version)" ]];
   then
@@ -113,7 +129,7 @@ local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 # emojis in the prompt.
 export PROMPT=$'${ret_status} $(directory_name)$(git_dirty)$(need_push)%(?: %{$fg_bold[green]%}➤ : %{$fg_bold[red]%}!➤ %s)%{$reset_color%}'
 set_prompt () {
-  export RPROMPT="$(php_prompt) $(rb_prompt) $(nd_prompt)"
+  export RPROMPT="$(python_prompt) $(php_prompt) $(rb_prompt) $(nd_prompt)"
 }
 
 precmd() {
