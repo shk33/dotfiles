@@ -23,7 +23,7 @@ And then
 ## Install this dotfiles
 Run this:
 
-    git clone https://github.com/arandilopez/dotfiles.git ~/.dotfiles
+    git clone git@github.com:shk33/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     script/bootstrap
 
