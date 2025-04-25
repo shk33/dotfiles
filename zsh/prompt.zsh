@@ -84,6 +84,13 @@ php_version() {
   fi
 }
 
+go_version() {
+  if (( $+commands[go] ))
+  then
+    echo "$(go version | awk '{print $3}' | sed 's/go//')"
+  fi
+}
+
 rb_prompt() {
   if ! [[ -z "$(ruby_version)" ]]
   then
@@ -120,6 +127,15 @@ php_prompt() {
   fi
 }
 
+go_prompt() {
+  if ! [[ -z "$(go_version)" ]]
+  then
+    echo "%{$fg_bold[yellow]%}go: $(go_version)%{$reset_color%}"
+  else
+    echo ""
+  fi
+}
+
 directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\%{$reset_color%}"
 }
@@ -129,7 +145,7 @@ local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ %s)"
 # emojis in the prompt.
 export PROMPT=$'${ret_status} $(directory_name)$(git_dirty)$(need_push)%(?: %{$fg_bold[green]%}➤ : %{$fg_bold[red]%}!➤ %s)%{$reset_color%}'
 set_prompt () {
-  export RPROMPT="$(python_prompt) $(php_prompt) $(rb_prompt) $(nd_prompt)"
+  export RPROMPT="$(python_prompt) $(php_prompt) $(rb_prompt) $(nd_prompt) $(go_prompt)"
 }
 
 precmd() {
